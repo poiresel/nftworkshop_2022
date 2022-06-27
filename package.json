@@ -1,0 +1,11 @@
+{
+  "name": "nftworkshop_2022",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:poiresel/nftworkshop_2022.git",
+  "author": "Deepa Sathaye <deepa.sathaye@robinhood.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0"
+  }
+}
