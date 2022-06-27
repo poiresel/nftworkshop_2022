@@ -22,22 +22,27 @@ Through remix
 
 Navigate to https://remix.ethereum.org/
 
-
-
-
-
+Step 1. Create an account in Metamask or just connect your wallet
+Step 2. Add test coins to MetaMask
+    DM me for some Rinkeby 
+Step 4. Write a contract on Remix
+Step 5. Using NFT.storage (IPFS) to add information to your NFT
+Step 6. Mint an NFT
+Step 7. Check your NFT and play with it
+Step 8. Transfer it to a friend or just look at it in OpenSea
 
 # Level 2
 
 Download Truffle / Ganache / Yarn / NPM 
-
-
 Locally develop workshop
 
 
 # Level 3 
 
 Tie in Metadata (NFT.storage)
+
+-- Minting and distributed participate  ( wallet addresses )
+-- import your own NFT to your wallet
 
 # Level 4 
 
