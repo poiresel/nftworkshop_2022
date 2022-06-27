@@ -4,7 +4,8 @@ sample code going over launching an ERC721 / ERC1155 token through a variety of 
 
 # Set up steps
 
-Install Metamask on your Chrome browser
+Install Metamask on your Chrome browser (link)
+Git installed (steps to just do a zip file)
 
 # Level 0 
 
@@ -24,9 +25,25 @@ Navigate to https://remix.ethereum.org/
 
 
 
+
+
 # Level 2
 
-Locally developer
+Download Truffle / Ganache / Yarn / NPM 
+
+
+Locally develop workshop
+
+
+# Level 3 
+
+Tie in Metadata (NFT.storage)
+
+# Level 4 
+
+Tatum - create marketplace
+
+
 
 # Going to use truffle in this 
 npm install --save-dev truffle
