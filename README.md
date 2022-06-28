@@ -7,6 +7,7 @@ Everyone gets a hands-on experience creating, minting, and viewing NFTs
 * Creating an NFT using OpenZeppelin 
 Everyone is able to mint at least one NFT of their own
 Know how to view the created NFT in an NFT marketplace
+SendSafely for sending over the .env file
 
 
 # Set up steps
