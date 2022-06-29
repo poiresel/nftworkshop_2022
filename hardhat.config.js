@@ -3,7 +3,7 @@
 */
 require("@nomiclabs/hardhat-ethers");
 require('dotenv').config();
-const { PRIVATE_KEY, MUMBAI_URL } = process.env;
+const { PRIVATE_KEY, MUMBAI_URL, POLYGON_URL } = process.env;
 module.exports = {
   defaultNetwork: "PolygonMumbai",
   networks: {
