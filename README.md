@@ -4,8 +4,7 @@ sample code going over launching an ERC721 / ERC1155 token through a variety of 
 
 # Set up steps
 
-Install Metamask on your Chrome browser (link)
-Git installed (steps to just do a zip file)
+Install Metamask on your Chrome browser (https://metamask.io/)
 
 # Level 0 
 
@@ -42,12 +41,52 @@ Step 7. Transfer it to a friend or just look at it in OpenSea
 Download Node / Yarn / NPM / Hardhat
 Locally develop workshop
 
-Step 1 Run npm install
+Step 0 Clone repo and make sure you're in 
+Step 1
+```
+npm install
+```
 
 Step 2 
 ```
 npx hardhat
 ```
+
+Add the below to `hardhat.config.js`
+```
+/**
+* @type import('hardhat/config').HardhatUserConfig
+*/
+require("@nomiclabs/hardhat-ethers");
+require('dotenv').config();
+const { PRIVATE_KEY, MUMBAI_URL, POLYGON_URL } = process.env;
+module.exports = {
+  defaultNetwork: "PolygonMumbai",
+  networks: {
+    hardhat: {
+    },
+    PolygonMumbai: {
+      url: MUMBAI_URL,
+      accounts: [PRIVATE_KEY]
+    },
+    Polygon: {
+      url: POLYGON_URL,
+      accounts: [PRIVATE_KEY]
+    }
+  },
+  solidity: {
+    version: "0.8.12",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  },
+}
+```
+
+Copy the info into the .env file at the root of the repor
 
 Step 3
 
