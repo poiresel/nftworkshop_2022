@@ -39,22 +39,42 @@ Step 7. Transfer it to a friend or just look at it in OpenSea
 
 # Level 2
 
-Download Truffle / Ganache / Yarn / NPM 
+Download Node / Yarn / NPM / Hardhat
 Locally develop workshop
 
+Step 1 Run npm install
 
-# Level 3 
+Step 2 
+```
+npx hardhat
+```
 
-Tie in Metadata (NFT.storage)
+Step 3
 
--- Minting and distributed participate  ( wallet addresses )
--- import your own NFT to your wallet
+```
+mkdir contracts assets scripts
+```
 
-# Level 4 
+Step 4: Add an image to the assets which will serve your NFT image
 
-Tatum - create marketplace
+Step 5: Add the name of the file to the top of the store-asset script
+```
+node scripts/store-asset.mjs
+```
 
+Stepe 6
 
+Update the smart contract with the name and make sure that name is updated in `scripts/deploy-contract.mjs`
 
-# Going to use truffle in this 
-npm install --save-dev truffle
+Step 6:
+```
+npx hardhat run scripts/deploy-contract.mjs --network PolygonMumbai
+```
+
+Step 7
+```
+npx hardhat run scripts/mint-nft.mjs \--network PolygonMumbai
+```
+
+Step 8
+Look for the deployed NFT: https://mumbai.polygonscan.com/
