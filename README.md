@@ -101,7 +101,7 @@ Step 5: Add the name of the file to the top of the store-asset script
 node scripts/store-asset.mjs
 ```
 
-Stepe 6
+Step 6
 
 Update the smart contract with the name and make sure that name is updated in `scripts/deploy-contract.mjs`
 
