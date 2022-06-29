@@ -6,8 +6,11 @@
   "author": "Deepa Sathaye <deepa.sathaye@robinhood.com>",
   "license": "MIT",
   "dependencies": {
-    "@openzeppelin/contracts": "^4.6.0",
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@openzeppelin/contracts": "^4.7.0",
     "@truffle/hdwallet-provider": "^2.0.9",
     "dotenv": "^16.0.1",
+    "hardhat": "^2.9.9",
+    "nft.storage": "^6.4.0"
   }
 }

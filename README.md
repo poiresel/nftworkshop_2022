@@ -4,8 +4,7 @@ sample code going over launching an ERC721 / ERC1155 token through a variety of 
 
 # Set up steps
 
-Install Metamask on your Chrome browser (link)
-Git installed (steps to just do a zip file)
+Install Metamask on your Chrome browser (https://metamask.io/)
 
 # Level 0 
 
@@ -39,22 +38,82 @@ Step 7. Transfer it to a friend or just look at it in OpenSea
 
 # Level 2
 
-Download Truffle / Ganache / Yarn / NPM 
+Download Node / Yarn / NPM / Hardhat
 Locally develop workshop
 
+Step 0 Clone repo and make sure you're in 
+Step 1
+```
+npm install
+```
 
-# Level 3 
+Step 2 
+```
+npx hardhat
+```
 
-Tie in Metadata (NFT.storage)
+Add the below to `hardhat.config.js`
+```
+/**
+* @type import('hardhat/config').HardhatUserConfig
+*/
+require("@nomiclabs/hardhat-ethers");
+require('dotenv').config();
+const { PRIVATE_KEY, MUMBAI_URL, POLYGON_URL } = process.env;
+module.exports = {
+  defaultNetwork: "PolygonMumbai",
+  networks: {
+    hardhat: {
+    },
+    PolygonMumbai: {
+      url: MUMBAI_URL,
+      accounts: [PRIVATE_KEY]
+    },
+    Polygon: {
+      url: POLYGON_URL,
+      accounts: [PRIVATE_KEY]
+    }
+  },
+  solidity: {
+    version: "0.8.12",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  },
+}
+```
 
--- Minting and distributed participate  ( wallet addresses )
--- import your own NFT to your wallet
+Copy the info into the .env file at the root of the repor
 
-# Level 4 
+Step 3
 
-Tatum - create marketplace
+```
+mkdir contracts assets scripts
+```
 
+Step 4: Add an image to the assets which will serve your NFT image
 
+Step 5: Add the name of the file to the top of the store-asset script
+```
+node scripts/store-asset.mjs
+```
 
-# Going to use truffle in this 
-npm install --save-dev truffle
+Step 6
+
+Update the smart contract with the name and make sure that name is updated in `scripts/deploy-contract.mjs`
+
+Step 6:
+```
+npx hardhat run scripts/deploy-contract.mjs --network PolygonMumbai
+```
+
+Step 7
+```
+npx hardhat run scripts/mint-nft.mjs \--network PolygonMumbai
+```
+
+Step 8
+Look for the deployed NFT: https://mumbai.polygonscan.com/
