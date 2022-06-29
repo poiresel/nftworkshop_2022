@@ -10,7 +10,7 @@ const POLYGON_URL = process.env.POLYGON_URL
 // PolygonMumbai: {
 //  url: "https://rpc-mumbai.maticvigil.com",
 //  accounts: [PRIVATE_KEY]
-}
+//}
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
